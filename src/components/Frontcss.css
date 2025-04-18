@@ -6,7 +6,7 @@
     box-sizing: border-box;
 }
 .hero-section {
-    background-image: url('./image/background.jpg');
+    background-image: url('/image/background.jpg');
     background-size: cover;
     background-position: center;
     height: 50vh;
