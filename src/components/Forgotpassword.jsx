@@ -12,7 +12,7 @@ const Forgotpassword=()=>{
     const processapi=async($event)=>{
         try{
             $event.preventDefault();
-            let authapi='http://localhost:5001/api/auth/setpassword'
+            let authapi='https://job-portal-4xtg.onrender.com/api/auth/setpassword'
             const responce=await axios.post(authapi,{
                 'username':username,
                 'password':password

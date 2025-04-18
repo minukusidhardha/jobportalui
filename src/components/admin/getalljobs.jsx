@@ -6,7 +6,7 @@ function GetallJobs(){
     const [job,setjob]=useState([])
     useEffect(()=>{
         const jobproject=async()=>{
-        let alljobsapi='http://localhost:5001/api/jobs/get'
+        let alljobsapi='https://job-portal-4xtg.onrender.com/api/jobs/get'
         let responce=await axios.get(alljobsapi)
         setjob(responce.data)
         }

@@ -12,7 +12,7 @@ function UserOnboard(){
     const Processonboard=async($event)=>{
         try{
             $event.preventDefault();
-            let userapi='http://localhost:5001/api/user/add'
+            let userapi='https://job-portal-4xtg.onrender.com/api/user/add'
             let responce=await axios.post(userapi,{
                 'name':name,
                 'city':city,

@@ -11,7 +11,7 @@ function UserList(){
                 let header = {
                     'Authorization': 'bearer ' + localStorage.getItem('token')
                 }
-                let userapi = 'http://localhost:5001/api/user/get'
+                let userapi = 'https://job-portal-4xtg.onrender.com/api/user/get'
                 const responce = await axios.get(userapi, { headers: header })
                 setuser(responce.data)
                 console.log(responce.data)

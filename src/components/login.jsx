@@ -13,7 +13,7 @@ function Login(){
     let responce
     try{
         $event.preventDefault();
-        let authapi='http://localhost:5001/api/auth/login'
+        let authapi='https://job-portal-4xtg.onrender.com/api/auth/login'
          responce=await axios.post(authapi,{
             'username':username,
             'password':password

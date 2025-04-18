@@ -8,7 +8,7 @@ function JobAssigned(){
     useEffect(()=>{
       const enterjob=async()=>{
         try{
-         let jobapi='http://localhost:5001/api/application/get'
+         let jobapi='https://job-portal-4xtg.onrender.com/api/application/get'
          const header={
             'Authorization':'bearer '+localStorage.getItem('token')
          }

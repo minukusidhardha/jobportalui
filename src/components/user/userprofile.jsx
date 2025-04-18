@@ -13,7 +13,7 @@ function Userprofile(){
                 let header = {
                     'Authorization': 'bearer ' + localStorage.getItem('token')
                 }
-                let empapi = 'http://localhost:5001/api/user/getone'
+                let empapi = 'https://job-portal-4xtg.onrender.com/api/user/getone'
                 let responce = await axios.get(empapi, { headers: header })
                 setemployee(responce.data)
             }
@@ -40,7 +40,7 @@ function Userprofile(){
                 'Authorization':'Bearer '+localStorage.getItem('token'),
                 'Content-Type':'multipart/form-data'
             }
-            let profileapi='http://localhost:5001/api/user/profile'
+            let profileapi='https://job-portal-4xtg.onrender.com/api/user/profile'
             let responce=await axios.put(profileapi,fdata,{headers:header})
             // console.log(responce);
             toast.success('profile added');
@@ -66,7 +66,7 @@ function Userprofile(){
                 'Authorization':'Bearer '+localStorage.getItem('token'),
                 'Content-Type':'multipart/form-data'
             }
-            let cvapi='http://localhost:5001/api/user/cv'
+            let cvapi='https://job-portal-4xtg.onrender.com/api/user/cv'
             let responce=await axios.put(cvapi,fdata,{headers:header})
             // console.log(responce);
             toast.success('resume added');
@@ -114,26 +114,6 @@ function Userprofile(){
                         />
                     </div>
                     </form>
-                {/* {(() => {
-                    if (!employee.profilepic) {
-                        <div className="col-lg-12">
-                            <label className="form-label">Profile Pic</label>
-                            <input type="file" className="form-control" onChange={handleprofile}
-                            />
-                            <br />
-                            <button className="btn btn-secondary" onClick={Uploadprofile} >Upload</button>
-                        </div>
-
-                    } else{
-                        <div className="col-md-12">
-                            <label className="form-label">Prifile</label>
-                            <input type="text" className="form-control"
-                                value={employee.username}
-                            />
-                        </div>
-                    }
-                    }
-                    )} */}
                     <div className="col-lg-12">
                             <label className="form-label">Profile Pic</label>
                             <input type="file" className="form-control" onChange={handleprofile}

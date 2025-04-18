@@ -15,7 +15,8 @@
     padding: 20px;
   }
   .welcome-sections {
-    background-image: url('./image/homepage.avif');
+    background-image: url('/image/homepage.avif');
+    background:fixed;
     padding: 300px 20px;
     text-align: center;
     border-radius: 8px;

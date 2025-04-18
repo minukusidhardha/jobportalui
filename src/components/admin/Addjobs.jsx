@@ -10,10 +10,18 @@ function Addjobs(){
     const [techstack,settechstack]=useState(undefined)
     const [msg,setmsg]=useState(undefined)
 
-    const ProcessAddjob=async()=>{
+    const ProcessAddjob=async($event)=>{
         try{
-            let addjobapi='http://localhost:5001/api/jobs/add'
-            let responce=await axios.post(addjobapi,)
+            $event.preventDefault();
+            let addjobapi='https://job-portal-4xtg.onrender.com/api/jobs/add'
+            let responce=await axios.post(addjobapi,{
+                'title':title,
+                'shortdec':shortdec,
+                'salary':salary,
+                'experience':experience,
+                'techstack':techstack
+            })
+            setmsg('Job Added')
 
         }
         catch(err){
@@ -75,8 +83,8 @@ function Addjobs(){
                                     />
                                 </div>
 
-                                <div className="col-12">
-                                    <button type="submit" className="btn btn-primary">Employee Onboarding</button>
+                                <div className="col">
+                                    <button type="submit" className="btn btn-primary">Add Job</button>
                                 </div>
                             </form>
                         </div>

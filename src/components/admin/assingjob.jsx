@@ -14,7 +14,7 @@ function Assignjob(){
                 let header = {
                     'Authorization': 'bearer ' + localStorage.getItem('token')
                 }
-                let userapi = 'http://localhost:5001/api/user/get'
+                let userapi = 'https://job-portal-4xtg.onrender.com/api/user/get'
                 const responce = await axios.get(userapi, { headers: header })
                 setuser(responce.data)
                 // console.log(responce)
@@ -28,7 +28,7 @@ function Assignjob(){
                 let header = {
                     'Authorization': 'bearer ' + localStorage.getItem('token')
                 }
-                let userapi = 'http://localhost:5001/api/jobs/get'
+                let userapi = 'https://job-portal-4xtg.onrender.com/api/jobs/get'
                 const responce = await axios.get(userapi, { headers: header })
                 setjob(responce.data)
                 // console.log(responce)
@@ -44,12 +44,12 @@ function Assignjob(){
         try{
             $event.preventDefault();
             console.log('hello')
-            let assignapi='http://localhost:5001/api/application/add'
+            let assignapi='https://job-portal-4xtg.onrender.com/api/application/add'
             let responce=await axios.post(assignapi,{
                 'jid':jobid,
                 'uid':userid
             })
-            setmsg('application added')
+            setmsg('Job is Assigned')
 
         }
         catch(err){
