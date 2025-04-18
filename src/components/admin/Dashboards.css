@@ -11,11 +11,11 @@
 
   .dashboard-containers {
     max-width: 2000px;
+    background-image: url('/image/homepage.avif');
     margin: 0 auto;
     padding: 20px;
   }
   .welcome-sections {
-    background-image: url('/image/homepage.avif');
     background:fixed;
     padding: 300px 20px;
     text-align: center;
