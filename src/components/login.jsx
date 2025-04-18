@@ -18,13 +18,14 @@ function Login(){
             'username':username,
             'password':password
         })
+        setmsg('Loging in')
     }
         catch(responce){
             if(responce.status===400){
                 toast.error('Invalid Credencials')
+                setmsg('invalid credencials')
                 }
         }
-        console.log(responce);
         let role=responce.data.role
         localStorage.setItem('token',responce.data.token)
         switch (role) {
