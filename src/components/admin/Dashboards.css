@@ -11,6 +11,7 @@
 
   .dashboard-containers {
     max-width: 2000px;
+    height: 100vh;
     background-image: url('/image/homepage.avif');
     margin: 0 auto;
     padding: 20px;
