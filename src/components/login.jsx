@@ -4,9 +4,9 @@ import './Login.css'
 import { isRouteErrorResponse, NavLink, useNavigate } from "react-router";
 import { toast } from "react-toastify";
 function Login(){
-    const [username,setusername]=useState(undefined)
-   const [password,setpassword]=useState(undefined)
-   const [msg,setmsg]=useState(undefined)
+    const [username,setusername]=useState()
+   const [password,setpassword]=useState()
+   const [msg,setmsg]=useState()
    const navigate=useNavigate();
 
    const processapi= async($event)=>{
@@ -44,9 +44,6 @@ function Login(){
    
     return(
         <div>
-            <div className="row mb-5">
-
-            </div>
             <div className="row" style={{marginTop:'10%'}}>
                 <div className="col-sm-3"></div>
                 <div className="col-sm-5">
@@ -90,31 +87,6 @@ function Login(){
                                     </div>
                                     <div id="errorMessage" style={{ color: 'red' }}></div>
                                 </form>
-
-                                {/* <form onSubmit={processapi}>
-                                    <div className=" form-control mb-4">
-                                    <label > Username:</label>
-                                    <input className="form-control" type="text"  placeholder="Username"
-                                     onChange={($event) => setusername($event.target.value)} 
-                                     />
-                                    </div>
-                                    <div className="form-control mb-5">
-                                    <label >Password:</label>
-                                    <input className="form-control" type="password" placeholder="Password" 
-                                     onChange={($event) => setpassword($event.target.value)}
-                                      />
-                                    </div>
-                                    <NavLink to='/forgot'>
-                                        <div className="text-muted" href="#" 
-                                        >Forgot password?</div>
-                                        </NavLink>
-                                    
-                                    <div className="mb-2-md-4">
-                                        <button type="submit" className="btn btn-primary btn-block btn-large"
-                                            disabled={!username || !password}>Login</button>
-                                    </div>
-
-                                </form> */}
                             </div>
                         </div>
                     </div>

@@ -69,7 +69,7 @@ function Userprofile(){
             let cvapi='http://localhost:5001/api/user/cv'
             let responce=await axios.put(cvapi,fdata,{headers:header})
             // console.log(responce);
-            toast.success('profile added');
+            toast.success('resume added');
 
         }
         catch(err){
